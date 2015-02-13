@@ -99,4 +99,23 @@ public class LogAnalyzer
         
         return numberOfAccesses;
     }
+    
+    /**
+     * devuelve en qué hora el servidor tuvo que responder a más peticiones. 
+     */
+    public int busiestHour()
+    {
+        int maxHour = 0;
+        int hour = 0;
+        //sumalizacion de todos los accesos de cada hora
+        while(hour < hourCounts.length)
+        {
+          if (maxHour < hourCounts[hour])
+          {
+              maxHour = hour;
+          }
+            hour++;
+        }  
+        return maxHour;
+    }
 }
