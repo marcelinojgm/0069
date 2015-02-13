@@ -81,4 +81,22 @@ public class LogAnalyzer
     {
         reader.printData();
     }
+    
+    /**
+     * devuelva el número total de accesos al servidor web registrados en el archivo de log. 
+     */
+    public int numberOfAccesses()
+    {
+        //guardado del numero de todos los accesos
+        int numberOfAccesses = 0;
+        int hour = 0;
+        //sumalizacion de todos los accesos de cada hora
+        while(hour < hourCounts.length)
+        {
+            numberOfAccesses = numberOfAccesses + hourCounts[hour];
+            hour++;
+        }
+        
+        return numberOfAccesses;
+    }
 }
