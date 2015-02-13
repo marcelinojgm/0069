@@ -118,4 +118,24 @@ public class LogAnalyzer
         }  
         return maxHour;
     }
+    
+    /**
+     *  devuelve la hora a la que el servidor estuvo menos sobrecargado
+     */
+    
+    public int quietestHour()
+    {
+        int maxHour = hourCounts[0];
+        int hour = 1;
+        //sumalizacion de todos los accesos de cada hora
+        while(hour < hourCounts.length)
+        {
+          if (maxHour > hourCounts[hour])
+          {
+              maxHour = hour;
+          }
+            hour++;
+        }  
+        return maxHour;  
+    }
 }
