@@ -65,7 +65,8 @@ public class LogfileCreator
         int day = 1 + rand.nextInt(28);
         int hour = rand.nextInt(24);
         int minute = rand.nextInt(60);
-        return new LogEntry(year, month, day, hour, minute);
+        int successful = rand.nextInt(2);
+        return new LogEntry(year, month, day, hour, minute , successful);
     }
 
 }
