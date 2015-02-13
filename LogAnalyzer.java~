@@ -149,7 +149,7 @@ public class LogAnalyzer
         {
             if (max < hourCounts[hour] + hourCounts[hour+1])
             {
-                max = hourCounts[hour] + hourCounts[hour+1];
+                max < hourCounts[hour] + hourCounts[hour+1];
                 maxHour = hour;
             }
             hour++;
